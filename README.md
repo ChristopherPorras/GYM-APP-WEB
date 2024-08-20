@@ -97,7 +97,6 @@ The project follows an **MVC (Model-View-Controller)** architecture, with a clea
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=ChristopherPorras&layout=compact&theme=radical)
 
-_(Replace `YOUR_GITHUB_USERNAME` with your GitHub username to display the languages used in this repository)._
 
 ## Project Structure
 

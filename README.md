@@ -109,6 +109,8 @@ The project follows an **MVC (Model-View-Controller)** architecture, with a clea
 
 Below are some images showcasing the application's functionality and user interface:
 
+![Login Screen](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20214750.png)
+
 ### 1. Login Screen
 ![Login Screen](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20213910.png)
 
@@ -130,6 +132,7 @@ Below are some images showcasing the application's functionality and user interf
 
 ![User Progress Dashboard](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20214203.png)
 
+![User Progress Dashboard](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20214709%20-%20Copy.png)
 
 ---
 

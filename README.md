@@ -111,10 +111,3 @@ _(Replace 'path/to/image/' with the correct paths to the project images)._
 ---
 
 This README provides an overview of the gym management project. For more details, refer to the documentation and source code.
-"""
-
-# Writing the updated README with the technology analysis section to the file
-with open(readme_path, 'w') as file:
-    file.write(readme_content_with_analysis)
-
-readme_content_with_analysis

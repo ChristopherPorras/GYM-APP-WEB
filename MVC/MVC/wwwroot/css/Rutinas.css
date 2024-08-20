@@ -1,0 +1,101 @@
+﻿/* General body styling */
+body {
+    background-color: #151515;
+    color: white; /* Asegura que el texto sea legible contra el fondo oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    max-width: 100%;
+    padding: 20px;
+    background-color: #151515; /* Fondo oscuro para todo el contenedor */
+}
+
+/* Input and select elements styling */
+input, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #252323;
+    color: white;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Label styling */
+label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Button styling */
+button {
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: black;
+    color: #f36100;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button.ghost {
+        background-color: transparent;
+        border-color: white;
+    }
+
+/* Title styling */
+h2, h4 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Suggestions list styling */
+#suggestions {
+    background-color: #252323;
+    border: 1px solid #333;
+    color: white;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+    #suggestions .list-group-item {
+        background-color: #252323;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+        #suggestions .list-group-item:hover {
+            background-color: #333;
+        }
+
+/* Exercise List styling */
+#exerciseList {
+    color: #fff;
+}
+.aaa {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: black;
+    border: 1px solid rgba(0, 0, 0, .125);
+}

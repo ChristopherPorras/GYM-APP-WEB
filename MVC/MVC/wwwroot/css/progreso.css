@@ -1,0 +1,317 @@
+﻿.container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+body {
+    background-color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    table th, table td {
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+        border: 1px solid #333;
+    }
+
+    table th {
+        background-color: #212529;
+    }
+
+    /* Alternating row colors */
+    table tr:nth-child(even) {
+        background-color: #212529;
+    }
+
+.modal-header, .modal-body {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.estado-activo {
+    color: #f36100;
+}
+
+.estado-inactivo {
+    color: red;
+    font-weight: bold;
+}
+
+.botones {
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: black;
+    color: #f36100;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.form-group input[readonly] {
+    background-color: #212529;
+    color: white;
+}
+
+button, input {
+    overflow: visible;
+}
+
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    background-color: #212529;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input {
+    background-color: #212529;
+    color: white;
+}
+
+.form-group input, .form.form-group input[readonly] {
+    background-color: #212529;
+    color: white;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    background-color: #212529;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+-group select {
+    width: 100%;
+    padding: 8px;
+    background-color: #212529;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+border: 1px solid white;
+background-color: black;
+color: #f36100;
+text-decoration: #f36100;
+font-size: 12px;
+font-weight: bold;
+padding: 7px 32px;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: transform 80ms ease-in;
+margin-bottom: 2%;
+margin-left: 1%;
+}
+
+.letras {
+    color: white;
+    justify-content: center;
+}
+
+rol-link {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h5 {
+    color: white;
+}
+
+.mod {
+    background-color: #252323;
+    color: white;
+}
+
+btn-close {
+    color: white:
+}
+
+.cuadritos {
+    background-color: #212529;
+    color: white;
+}
+
+.button-unavailable {
+    background-color: #cf1d1d;
+    color: white;
+}
+
+.button-available, .button-unavailable {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+label {
+    color: white;
+}
+
+.form {
+    background-color: #212529;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.selects {
+    background-color: #212529;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 90px;
+    color: #fff;
+    background-color: #495057;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+    .selects option {
+        padding: 4px;
+        background-color: #212529;
+        color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        margin-bottom: 3px;
+    }
+
+        .selects option:hover {
+            background-color: #343a40;
+        }
+
+    .selects:focus {
+        border-color: #00aaff;
+        box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+    }
+
+div {
+    color: white;
+}
+.rect {
+    background-color: #212529;
+}
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: white; 
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+    color: white; 
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+    color: white; 
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #212529;
+}
+
+.highcharts-data-table tr:hover {
+    background: #212529; 
+}
+
+.highcharts-container {
+    background-color: #212529; 
+}
+
+.highcharts-title,
+.highcharts-axis-title,
+.highcharts-axis-labels text,
+.highcharts-data-labels text,
+.highcharts-legend-item text,
+.highcharts-tooltip text {
+    fill: white !important; 
+}
+
+.highcharts-axis-labels text,
+.highcharts-data-labels text,
+.highcharts-legend-item text,
+.highcharts-tooltip text {
+    fill: white !important; 
+}
+
+.highcharts-tooltip {
+    background: rgba(33, 37, 41, 0.9);
+    color: white; 
+}
+
+
+rect {
+    fill: #212529;
+    filter: none;
+    x: 0;
+    y: 0;
+    width: 645;
+    height: 400; 
+}

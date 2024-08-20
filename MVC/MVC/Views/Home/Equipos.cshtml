@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Equipos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="~/css/usuarioRole.css" type="text/css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Gestión de Equipos</h2>
+        <button class="botones" data-bs-toggle="modal" data-bs-target="#createModal">Crear Equipo</button>
+        <table class="">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Grupo Muscular</th>
+                    <th>Cantidad</th>
+                    <th>Disponible</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="equiposTableBody">
+                <!-- Aquí se llenará la tabla de equipos mediante JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Crear -->
+    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content mod">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createModalLabel">Crear Equipo</h5>
+                    <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createForm">
+                        <div class="mb-3">
+                            <label for="createNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control cuadritos" id="createNombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="createDescripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control cuadritos" id="createDescripcion" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="createGrupoMuscular" class="form-label">Grupo Muscular</label>
+                            <select class="form-select cuadritos" id="createGrupoMuscular" required>
+                                <option value="Piernas">Piernas</option>
+                                <option value="Hombros">Hombros</option>
+                                <option value="Brazos">Brazos</option>
+                                <option value="Pecho">Pecho</option>
+                                <option value="Espalda">Espalda</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="createCantidad" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control cuadritos" id="createCantidad" required>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="createDisponible">
+                            <label class="form-check-label" for="createDisponible">Disponible</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary botones">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Modificar -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header mod">
+                    <h5 class="modal-title" id="editModalLabel">Modificar Equipo</h5>
+                    <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mod">
+                    <form id="editForm">
+                        <div class="mb-3">
+                            <label for="editID" class="form-label">ID</label>
+                            <input type="text" class="cuadritos" id="editID" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control cuadritos" id="editNombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editDescripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control cuadritos" id="editDescripcion" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editGrupoMuscular" class="form-label">Grupo Muscular</label>
+                            <select class="form-select cuadritos" id="editGrupoMuscular" required>
+                                <option value="Pierna">Pierna</option>
+                                <option value="Pecho">Pecho</option>
+                                <option value="Espalda">Espalda</option>
+                                <option value="Hombros">Hombros</option>
+                                <option value="Brazos">Brazos</option>
+                                <option value="Abdomen">Abdomen</option>
+                                <option value="Antebrazo">Antebrazo</option>
+                                <option value="Trapecio">Trapecio</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editCantidad" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control cuadritos" id="editCantidad" required>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="editDisponible">
+                            <label class="form-check-label" for="editDisponible">Disponible</label>
+                        </div>
+                        <button type="submit" class="btn btn-warning botones">Modificar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Eliminar -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header mod">
+                    <h5 class="modal-title" id="deleteModalLabel">Eliminar Equipo</h5>
+                    <button type="button" class="btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body mod">
+                    <p>¿Está seguro de que desea eliminar este equipo?</p>
+                    <form id="deleteForm">
+                        <input type="hidden" class="form-control cuadritos" id="deleteID">
+                        <button type="submit" class="btn btn-danger botones">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluir jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Incluir SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!-- Incluir tu archivo JS personalizado -->
+    <script src="~/js/Equipos.js"></script>
+</body>
+</html>

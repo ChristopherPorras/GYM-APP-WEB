@@ -1,0 +1,123 @@
+﻿<link rel="stylesheet" href="~/css/PayDesign.css" type="text/css">
+
+<!-- Main and Cart Section Side by Side -->
+<div class="container background-cart mt-5">
+    <div class="row">
+        <!-- Main Section (Products) -->
+        <div class="col-md-8">
+            <div class="row container-mipadding">
+                <div class="ancho flex">
+                    <div class="card-block background descripcion flex">
+                        <ul class="flex">
+                            <li class="descripcion">
+                                <h3>Paquete</h3>
+                                <p class="pad">Entrenamiento sin cita previa</p>
+                            </li>
+                            <li class="descripcion">
+                                <h3>Oferta</h3>
+                                <p class="pad">Equipos ilimitados<br>Entrenador personal</p>
+                            </li>
+                        </ul>
+                        <p class="descripcion-price pad">Price: $39</p>
+                        <label>
+                            <input type="checkbox" class="add-to-cart pad" data-name="Pack de $39" data-price="39"> Comprar
+                        </label>
+                    </div>
+                </div>
+
+                <div class="ancho flex">
+                    <div class="card-block background descripcion2 flex">
+                        <ul class="flex">
+                            <li class="descripcion">
+                                <h3 class="pad">Paquete</h3>
+                                <p class="pad">6 meses ilimitados</p>
+                            </li>
+                            <li class="descripcion">
+                                <h3 class ="pad">Oferta</h3>
+                                <p class="pad">Equipos ilimitados<br>Entrenador personal<br />Conducción gratuita</p>
+                            </li>
+                        </ul>
+                        <p class="descripcion-price pad">Price: $59</p>
+                        <label>
+                            <input type="checkbox" class="add-to-cart pad" data-name="Pack de $59" data-price="59"> Comprar
+                        </label>
+                    </div>
+                </div>
+
+                <div class="ancho flex">
+                    <div class="card-block background descripcion3 flex">
+                        <ul class="flex">
+                            <li class="descripcion">
+                                <h3 class="pad">Paquete</h3>
+                                <p class ="pad">12 meses ilimitados</p>
+                            </li>
+                            <li class="descripcion">
+                                <h3 class="pad">Oferta</h3>
+                                <p class="pad">
+                                    Equipos ilimitados<br>Entrenador personal<br />Conducción gratuita<br />Clases para bajar de peso<br>Sin restricción de tiempo
+                                </p>
+                            </li>
+                        </ul>
+                        <p class="descripcion-price pad">Price: $99</p>
+                        <label>
+                            <input type="checkbox" class="add-to-cart pad" data-name="Pack de $99" data-price="99"> Comprar
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="col-md-4">
+            <h5>Carito</h5>
+            <table class="show-cart table letters">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los elementos del carrito se insertarán aquí -->
+                </tbody>
+            </table>
+            <div>Precio Total: $<span class="total-cart"></span></div>
+            <div class="form-group mt-3">
+                <label for="discount-code">Codigo de Descuento:</label>
+                <input type="text" class="form-control" id="discount-code" placeholder="Introduzca codigo">
+            </div>
+            <button type="button" class="btn btn-success mt-2" id="apply-discount">Aplicar Descuento</button>
+
+            <!-- Credit Card Information -->
+            <div class="form-group mt-2">
+                <label for="card-name">Nombre de la Tarjeta:</label>
+                <input type="text" class="form-control" id="card-name" placeholder="Introducir Informacion">
+            </div>
+            <div class="form-group mt-2">
+                <label for="card-number">Numero de Tarjeta:</label>
+                <input type="text" class="form-control" id="card-number" placeholder="Introducir Informacion">
+            </div>
+            <div class="form-group mt-2">
+                <label for="card-expiry">Fecha de Expiracion:</label>
+                <input type="text" class="form-control" id="card-expiry" placeholder="MM/YY">
+            </div>
+            <div class="form-group mt-2">
+                <label for="card-cvv">CVV:</label>
+                <input type="text" class="form-control" id="card-cvv" placeholder="Introducir Informacion">
+            </div>
+
+            <div class="mt-3">
+                <button type="button" class="btn btn-primary" id="realizar-compra">Realizar Compra</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="~/js/PayScript.js"></script>

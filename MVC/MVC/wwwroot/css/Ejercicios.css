@@ -1,0 +1,159 @@
+﻿/* General body styling */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    max-width: 100%;
+    padding: 20px;
+    background-color: black; 
+}
+
+/* Input and select elements styling */
+input, select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #252323;
+    color: white;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Button styling */
+button {
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: black;
+    color: #f36100;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button.ghost {
+        background-color: transparent;
+        border-color: white;
+    }
+
+
+h2, h4 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    table th, table td {
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+        border: 1px solid #333;
+    }
+
+    table th {
+        background-color: #212529;
+    }
+
+    /* Alternating row colors */
+    table tr:nth-child(even) {
+        background-color: #212529;
+    }
+
+.modal-content {
+    background-color: #252323;
+}
+
+    .modal-content .form-label,
+    .modal-content input,
+    .modal-content textarea,
+    .modal-content select,
+    .modal-content .form-check-label {
+    }
+
+    .modal-content input,
+    .modal-content textarea,
+    .modal-content select {
+        background-color: #555;
+        border: none;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .modal-content .btn {
+        border-radius: 20px;
+        border: 1px solid white;
+        background-color: black;
+        color: #f36100;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 20px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+    }
+
+        .modal-content .btn:active {
+            transform: scale(0.95);
+        }
+
+        .modal-content .btn:focus {
+            outline: none;
+        }
+table-style {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    table-style th, .table-style td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+
+    table-style th {
+        background-color: #f2f2f2;
+    }
+
+exercise-item:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+.cuadritos {
+    background-color: #212529;
+    color: white;
+}

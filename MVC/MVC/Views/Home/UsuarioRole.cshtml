@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.3.5/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="~/css/usuarioRole.css">
+
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>@ViewData["Title"]</h2>
+        <div>
+        <button class="botones" data-toggle="modal" data-target="#createUsuarioRoleModal">Crear Usuario</button>
+        <button class="botones" data-toggle="modal" data-target="#filterUsuarioRoleModal">Filtrar Usuarios</button>
+        <button class="botones" " id="resetFiltersButton">Quitar Filtros</button>
+        </div>
+        <div class="table-responsive">
+            <table id="usuarios-roles-table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Correo Electrónico</th>
+                        <th>Nombre</th>
+                        <th>Fecha Registro</th>
+                        <th>Teléfono</th>
+                        <!-- <th>Tipo de Usuario</th> -->
+                        <th>Estado</th>
+                        <th>Ha Pagado</th>
+                        <!-- <th>Email Verificado</th> -->
+                        <!-- <th>Tel Verificado</th> -->
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Los datos se llenarán mediante JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal para crear usuario -->
+    <div id="createUsuarioRoleModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Crear Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="createUsuarioRoleForm">
+                        <div class="form-group">
+                            <label for="createCorreoElectronico">Correo Electrónico</label>
+                            <input type="email" class="form-control cuadritos" id="createCorreoElectronico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="createNombre">Nombre</label>
+                            <input type="text" class="form-control cuadritos" id="createNombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="createContrasena">Contraseña</label>
+                            <input type="password" class="form-control cuadritos" id="createContrasena" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="createFechaRegistro">Fecha Registro</label>
+                            <input type="date" class="form-control cuadritos" id="createFechaRegistro" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="createTelefono">Teléfono</label>
+                            <input type="text" class="form-control cuadritos" id="createTelefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="createTipoUsuario">Tipo de Usuario</label>
+                            <input type="text" class="form-control cuadritos" id="createTipoUsuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="createEstado">Estado (Activo/Inactivo)</label>
+                            <input type="checkbox" class="cuadritos" id="createEstado">
+                        </div>
+                        <div class="form-group">
+                            <label for="createHaPagado">Ha Pagado</label>
+                            <input type="checkbox" class="cuadritos" id="createHaPagado">
+                        </div>
+                        <div class="form-group">
+                            <label for="createCorreoVerificado">Correo Verificado</label>
+                            <input type="checkbox" class="cuadritos" id="createCorreoVerificado">
+                        </div>
+                        <div class="form-group">
+                            <label for="createTelefonoVerificado">Teléfono Verificado</label>
+                            <input type="checkbox" class="cuadritos" id="createTelefonoVerificado">
+                        </div>
+                        <div class="form-group">
+                            <label for="createRolId">Rol</label>
+                            <select class="form-control cuadritos" id="createRolId" required></select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Crear Usuario</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para editar usuario -->
+    <div id="editUsuarioRoleModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Usuario y Rol</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editUsuarioRoleForm">
+                        <input type="hidden" id="editId">
+                        <div class="form-group">
+                            <label for="editCorreoElectronico">Correo Electrónico</label>
+                            <input type="email" class="form-control cuadritos" id="editCorreoElectronico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editNombre">Nombre</label>
+                            <input type="text" class="form-control cuadritos" id="editNombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editFechaRegistro">Fecha Registro</label>
+                            <input type="date" class="form-control cuadritos" id="editFechaRegistro" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editTelefono">Teléfono</label>
+                            <input type="text" class="form-control cuadritos" id="editTelefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editTipoUsuario">Tipo de Usuario</label>
+                            <input type="text" class="form-control cuadritos" id="editTipoUsuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editEstado">Estado (Activo/Inactivo)</label>
+                            <input type="checkbox" class="cuadritos" id="editEstado">
+                        </div>
+                        <div class="form-group">
+                            <label for="editHaPagado">Ha Pagado</label>
+                            <input type="checkbox" class="cuadritos" id="editHaPagado">
+                        </div>
+                        <div class="form-group">
+                            <label for="editCorreoVerificado">Correo Verificado</label>
+                            <input type="checkbox" class="cuadritos" id="editCorreoVerificado">
+                        </div>
+                        <div class="form-group">
+                            <label for="editTelefonoVerificado">Teléfono Verificado</label>
+                            <input type="checkbox" class="cuadritos" id="editTelefonoVerificado">
+                        </div>
+                        <div class="form-group">
+                            <label for="editRolId">Rol</label>
+                            <select class="form-control cuadritos" id="editRolId" required></select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para filtrar usuarios -->
+    <div id="filterUsuarioRoleModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Filtrar Usuarios</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="filterUsuarioRoleForm">
+                        <div class="form-group">
+                            <label for="filterCorreoElectronico">Correo Electrónico</label>
+                            <input type="email" class="form-control cuadritos" id="filterCorreoElectronico">
+                        </div>
+                        <div class="form-group">
+                            <label for="filterNombre">Nombre</label>
+                            <input type="text" class="form-control cuadritos" id="filterNombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="filterFechaRegistro">Fecha Registro</label>
+                            <input type="date" class="form-control cuadritos" id="filterFechaRegistro">
+                        </div>
+                        <div class="form-group">
+                            <label for="filterTelefono">Teléfono</label>
+                            <input type="text" class="form-control cuadritos" id="filterTelefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="filterTipoUsuario">Tipo de Usuario</label>
+                            <input type="text" class="form-control cuadritos" id="filterTipoUsuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="filterEstado">Estado</label>
+                            <select class="form-control cuadritos" id="filterEstado">
+                                <option value="">Todos</option>
+                                <option value="true">Activo</option>
+                                <option value="false">Inactivo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="filterHaPagado">Ha Pagado</label>
+                            <select class="form-control cuadritos" id="filterHaPagado">
+                                <option value="">Todos</option>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="filterCorreoVerificado">Correo Verificado</label>
+                            <select class="form-control cuadritos" id="filterCorreoVerificado">
+                                <option value="">Todos</option>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="filterTelefonoVerificado">Teléfono Verificado</label>
+                            <select class="form-control cuadritos" id="filterTelefonoVerificado">
+                                <option value="">Todos</option>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="filterRolId">Rol</label>
+                            <select class="form-control cuadritos" id="filterRolId">
+                                <option value="">Todos</option>
+                                <option value="1">Administrador</option>
+                                <option value="2">Entrenador</option>
+                                <option value="3">Recepcionista</option>
+                                <option value="4">Usuario</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Aplicar Filtros</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carga de bibliotecas JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="~/js/usuarioRole.js"></script>
+</body>
+</html>

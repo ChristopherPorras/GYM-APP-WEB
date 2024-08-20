@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="@Url.Action("SesionAdmin", "Home")">
+                            <img src="~/img/logo.png" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu op">
+                        <ul>
+                            <li><a href="@Url.Action("SesionAdmin", "Home")">Home</a></li>
+                            <li><a href="@Url.Action("UsuarioRole", "Rol")">Roles</a></li>
+                            <li><a href="@Url.Action("ConfigCitas", "Home")">Citas</a></li>
+                            <li><a href="@Url.Action("Equipos", "Home")">Maquinas</a></li>
+                            <li><a href="@Url.Action("Ejercicios", "Home")">Ejercicios</a></li>
+                            <li><a href="@Url.Action("Rutinas", "Home")">Rutinas</a></li>
+                            <li><a href="@Url.Action("Entrenador", "Home")">Apartar clase</a></li>
+                            <li><a href="@Url.Action("PayPage", "Home")">Pagos</a></li>
+                            <li><a href="@Url.Action("Team", "Home")">Sobre nosotros</a></li>
+                            <li><a href="@Url.Action("Contactenos", "Home")">Contactenos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option nav-menu">
+                        <ul>
+                            <li id="loginRegisterOption"> <a href="@Url.Action("LogPage", "Home")">Inicio Sesion/Registro</a> </li>
+                            <li id="logoutOption" style="display: none;"> <a href="#" id="logoutButton">LogOut</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <div>
+        @RenderBody()
+    </div>
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="~/img/logo.png" alt="Logo"></a>
+                        </div>
+                        <p>
+                            Pikachu es un pequeño Pokémon cuya morfología se encuentra basada en un roedor. Aunque su nombre y su categoría hagan alusión a un ratón, según su diseñadora, sus mejillas están basadas en las de una ardilla.
+                        </p>
+                        <div class="fa-social">
+                            <a href="https://x.com/Jadrix_29"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/watch?v=v-rWnobdpTM"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.twitch.tv/jadrix29"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Links utiles</h4>
+                        <ul>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="@Url.Action("ConfigCitas", "Home")">Clases</a></li>
+                            <li><a href="#">Contactos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="@Url.Action("LogPage", "Home")">Iniciar Sesión</a></li>
+                            <li><a href="#">Mi cuenta</a></li>
+                            <li><a href="@Url.Action("PayPage", "Home")">Pagos</a></li>
+                            <li><a href="#">Contactos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Tips & Guides</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">El ejercicio físico previene la depresión y ayuda con problemas de ansiedad.</a></h6>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Fitness: Es la mejor forma de bajar la pasan y definir el cuerpo...</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Proyecto 2 Cenfotec
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <style>
+        /*---------------------
+                        Header
+                        -----------------------*/
+        .header-section {
+            width: 100%;
+            padding: 0;
+            padding-top: 55px;
+            z-index: 99;
+            background: #000;
+        }
+
+        .logo a {
+            display: inline-block;
+        }
+
+        .nav-menu {
+            text-align: center;
+        }
+
+            .nav-menu ul li {
+                list-style: none;
+                display: inline-block;
+                margin-right: 32px;
+                position: relative;
+                z-index: 1;
+            }
+
+                .nav-menu ul li .dropdown {
+                    position: absolute;
+                    left: -30px;
+                    top: 58px;
+                    width: 180px;
+                    background: #252525;
+                    z-index: 99;
+                    text-align: left;
+                    padding: 13px 0 20px;
+                    opacity: 0;
+                    visibility: hidden;
+                    -webkit-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
+
+                    .nav-menu ul li .dropdown li {
+                        margin-right: 0;
+                        display: block;
+                    }
+
+                        .nav-menu ul li .dropdown li a {
+                            display: block;
+                            text-transform: none;
+                            padding: 6px 0 6px 30px;
+                            font-weight: 400;
+                        }
+
+                            .nav-menu ul li .dropdown li a:after {
+                                display: none;
+                            }
+
+                .nav-menu ul li:last-child {
+                    margin-right: 0;
+                }
+
+                .nav-menu ul li.active > a {
+                    color: #f36100;
+                }
+
+                    .nav-menu ul li.active > a:after {
+                        opacity: 1;
+                    }
+
+                .nav-menu ul li:hover > a {
+                    color: #f36100;
+                }
+
+                    .nav-menu ul li:hover > a:after {
+                        opacity: 1;
+                    }
+
+                .nav-menu ul li:hover .dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .nav-menu ul li a {
+                    color: #ffffff;
+                    display: block;
+                    font-size: 15px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-family: "Oswald", sans-serif;
+                    padding: 10px 0px;
+                    position: relative;
+                    -webkit-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
+
+                    .nav-menu ul li a:after {
+                        position: absolute;
+                        left: 0;
+                        top: 22px;
+                        height: 1px;
+                        width: 100%;
+                        background: #f36100;
+                        content: "";
+                        -webkit-transform: rotate(-20deg);
+                        -ms-transform: rotate(-20deg);
+                        transform: rotate(-20deg);
+                        opacity: 0;
+                        -webkit-transition: all 0.3s;
+                        -o-transition: all 0.3s;
+                        transition: all 0.3s;
+                    }
+
+        .top-option {
+            text-align: right;
+            padding: 9px 0;
+        }
+
+            .top-option .to-search {
+                display: inline-block;
+                padding-right: 20px;
+                position: relative;
+            }
+
+                .top-option .to-search:after {
+                    position: absolute;
+                    right: 0;
+                    top: 5px;
+                    height: 15px;
+                    width: 1px;
+                    background: rgba(255, 255, 255, 0.3);
+                    content: "";
+                }
+
+                .top-option .to-search i {
+                    font-size: 16px;
+                    color: #ffffff;
+                    cursor: pointer;
+                }
+
+            .top-option .to-social {
+                display: inline-block;
+            }
+
+                .top-option .to-social a {
+                    display: inline-block;
+                    color: #ffffff;
+                    font-size: 16px;
+                    margin-left: 15px;
+                }
+
+        .offcanvas-menu-wrapper {
+            display: none;
+        }
+
+        .canvas-open {
+            display: none;
+        }
+
+        /*---------------------
+                        Footer
+                        -----------------------*/
+        .footer-section {
+            background: #000000;
+            padding-top: 50px;
+        }
+
+        .fs-about {
+            margin-bottom: 30px;
+        }
+
+            .fs-about .fa-logo {
+                margin-bottom: 30px;
+            }
+
+                .fs-about .fa-logo a {
+                    display: inline-block;
+                }
+
+            .fs-about p {
+                line-height: 26px;
+                color: #c4c4c4;
+            }
+
+            .fs-about .fa-social a {
+                font-size: 14px;
+                color: #c4c4c4;
+                margin-right: 10px;
+            }
+
+                .fs-about .fa-social a:last-child {
+                    margin-right: 0;
+                }
+
+        .fs-widget {
+            margin-bottom: 30px;
+        }
+
+            .fs-widget h4 {
+                color: #ffffff;
+                font-weight: 600;
+                margin-bottom: 18px;
+            }
+
+            .fs-widget ul li {
+                list-style: none;
+            }
+
+                .fs-widget ul li a {
+                    font-size: 14px;
+                    color: #c4c4c4;
+                    line-height: 30px;
+                }
+
+            .fs-widget .fw-recent {
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #1a1a1a;
+            }
+
+                .fs-widget .fw-recent:last-child {
+                    padding-bottom: 0;
+                    border: none;
+                }
+
+                .fs-widget .fw-recent h6 {
+                    margin-bottom: 6px;
+                }
+
+                    .fs-widget .fw-recent h6 a {
+                        color: #c4c4c4;
+                        letter-spacing: 0.5px;
+                    }
+
+                .fs-widget .fw-recent ul li {
+                    font-size: 12px;
+                    color: #4d4d4d;
+                    display: inline-block;
+                    margin-right: 25px;
+                    position: relative;
+                }
+
+                    .fs-widget .fw-recent ul li:last-child:after {
+                        display: none;
+                    }
+
+                    .fs-widget .fw-recent ul li:after {
+                        position: absolute;
+                        right: -16px;
+                        top: 0;
+                        content: "|";
+                    }
+
+        .copyright-text {
+            font-size: 14px;
+            color: #c4c4c4;
+            letter-spacing: 0.5px;
+            border-top: 1px solid #1a1a1a;
+            padding: 25px 0;
+            margin-top: 15px;
+        }
+
+            .copyright-text a,
+            .copyright-text i {
+                color: #f36100;
+            }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/LogScript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Roles por Usuario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="~/css/Rol.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Gestión de Roles por Usuario</h1>
+        <button id="addUserBtn" class="btn btn-success mb-4">Agregar Usuario</button>
+
+        <div id="userList" class="table-container">
+        </div>
+
+        <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addUserModalLabel">Agregar Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addUserForm">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correoElectronico" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contrasena" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="contrasena" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control" id="telefono" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipoUsuario" class="form-label">Tipo de Usuario</label>
+                                <input type="text" class="form-control" id="tipoUsuario" required>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="correoVerificado">
+                                <label for="correoVerificado" class="form-check-label">Correo Verificado</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="telefonoVerificado">
+                                <label for="telefonoVerificado" class="form-check-label">Teléfono Verificado</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="rolID" class="form-label">Rol ID</label>
+                                <select class="form-select" id="rolID" required>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Recepcionista</option>
+                                    <option value="3">Entrenador</option>
+                                    <option value="4">Usuario</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Agregar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editUserModalLabel">Editar Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editUserForm">
+                            <input type="hidden" id="editUserId">
+                            <div class="mb-3">
+                                <label for="editNombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="editNombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editCorreoElectronico" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="editCorreoElectronico" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editContrasena" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="editContrasena" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editTelefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="editTelefono" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editTipoUsuario" class="form-label">Tipo de Usuario</label>
+                                <input type="text" class="form-control" id="editTipoUsuario" required>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="editCorreoVerificado">
+                                <label class="form-check-label" for="editCorreoVerificado">Correo Verificado</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="editTelefonoVerificado">
+                                <label class="form-check-label" for="editTelefonoVerificado">Teléfono Verificado</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editRolID" class="form-label">Rol ID</label>
+                                <select class="form-select" id="editRolID" required>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Recepcionista</option>
+                                    <option value="3">Entrenador</option>
+                                    <option value="4">Usuario</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="~/js/Roles.js"></script>
+</body>

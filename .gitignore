@@ -1,0 +1,67 @@
+# Ignorar archivos y carpetas comunes de Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar archivos de construcción
+bin/
+obj/
+out/
+
+# Ignorar archivos de publicación y despliegue
+publish/
+*.Publish.xml
+
+# Ignorar paquetes NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignorar configuraciones de usuario
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignorar configuraciones de carga de sitios locales
+.vscode/
+.settings/
+*.code-workspace
+
+# Ignorar archivos generados por la herramienta de seguimiento de errores
+.idea/
+.idea/*
+*.idea/
+*.log
+
+# Ignorar archivos de cobertura de código
+coverage/
+*.coverage
+*.coveragexml
+
+# Ignorar archivos temporales
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar configuraciones de base de datos local
+*.mdf
+*.ldf
+
+# Ignorar archivos de configuración de servidores locales
+.vs/
+.vscode/
+/MVC/MVC/Views/Home/team.cshtml
+/MVC/MVC/Views/Shared/_Layout-Entrenador.cshtml
+/MVC/MVC/Views/Shared/_Layout-Users.cshtml
+*.png

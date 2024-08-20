@@ -1,0 +1,72 @@
+@{
+    Layout = "~/Views/Shared/_LayoutInicio.cshtml";
+    var userName = ViewData["UserName"] as string;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/LogDesign.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="createUserForm" action="submit">
+                <h1>Crea tu Cuenta</h1>
+                <input id="nombre" type="text" required placeholder="Nombre" />
+                <input id="telefono" type="text" required placeholder="Telefono" />
+                <input id="correo" type="email" required placeholder="Correo" />
+                <input id="contrasena" type="password" required placeholder="Contraseña" />
+                <input id="confirmarContrasena" type="password" required placeholder="Confirmar Contraseña" />
+                <div id="strengthBar"><div></div></div>
+                <button type="submit" id="R">Registrate</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="iniciarForm" action="create">
+                <h1>Inicia sesión</h1>
+                <input id="correois" type="email" required placeholder="Email" />
+                <input id="contrasenais" type="password" required placeholder="Contraseña" />
+                <a href="@Url.Action("PasswordReset", "Home")">Recupera tu contraseña</a>
+                <button type="submit" id="iS">Iniciar Sesión</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>¡Te damos la bienvenida!</h1>
+                    <p id="userWelcomeMessage">Ingresa de nuevo ingresando con tu cuenta</p>
+                    <button class="ghost" id="signIn">Inicia Sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>¡En el mejor GYM!</h1>
+                    <p>Ingresa tus datos e inicia tu entrenamiento con nosotros</p>
+                    <button class="ghost" id="signUp">Quiero Registrarme</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalBackground"></div>
+
+    <div id="verificationModal">
+        <h2>Verificación de Correo</h2>
+        <p>Ingresa el código enviado a tu correo electrónico:</p>
+        <div class="code-inputs">
+            <input class="code-input" type="text" maxlength="1" required />
+            <input class="code-input" type="text" maxlength="1" required />
+            <input class="code-input" type="text" maxlength="1" required />
+            <input class="code-input" type="text" maxlength="1" required />
+            <input class="code-input" type="text" maxlength="1" required />
+            <input class="code-input" type="text" maxlength="1" required />
+        </div>
+        <button id="verifyCodeButton">Verificar</button>
+    </div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="~/js/LogScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Citas de Medición de Peso</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Enlaza con los archivos CSS -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/CitaDesign.css">
+    <style>
+        .selected-class {
+            background-color: orange !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <section class="class-timetable-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <span>Busca tu tiempo</span>
+                        <h2>Agenda de Citas de Medición de Peso</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="table-controls">
+                        <ul>
+                            <li class="active" data-tsfilter="all">Todos los horarios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="class-timetable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Horario</th>
+                                    <th>Lunes</th>
+                                    <th>Martes</th>
+                                    <th>Miércoles</th>
+                                    <th>Jueves</th>
+                                    <th>Viernes</th>
+                                    <th>Sábado</th>
+                                    <th>Domingo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="agendaBody">
+                                <!-- Las filas serán generadas dinámicamente -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="message" class="message">
+                        <!-- Mensajes dinámicos se insertarán aquí -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Agendar Cita -->
+    <div id="citaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="cancelarBtnModal">&times;</span>
+            <h2 class="titulo">Agendar Cita</h2>
+            <form id="agendarCitaForm">
+                <div class="form-group">
+                    <label for="fechaHoraDisplay">Fecha y Hora:</label>
+                    <p id="fechaHoraDisplay"></p>
+                </div>
+                <div class="form-group">
+                    <label for="usuarioNombre">Usuario:</label>
+                    <input type="text" id="usuarioNombre" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="entrenadorCorreo">Correo del Entrenador:</label>
+                    <select id="entrenadorCorreo"></select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoCita">Tipo de Cita:</label>
+                    <input type="text" id="tipoCita" value="Medición de Peso" readonly>
+                </div>
+
+                <!-- Elementos ocultos para almacenar información seleccionada -->
+                <input type="hidden" id="FechaCita" name="FechaCita">
+                <input type="hidden" id="diaSeleccionado" name="diaSeleccionado">
+                <input type="hidden" id="horarioSeleccionado" name="horarioSeleccionado">
+
+                <div class="modal-footer">
+                    <button type="submit" class="button-available">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Asegúrate de cargar jQuery antes de tu script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/Citas.js"></script>
+</body>
+</html>

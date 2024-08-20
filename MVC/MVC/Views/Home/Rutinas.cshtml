@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Rutinas";
+}
+<link rel="stylesheet" href="~/css/usuarioRole.css" type="text/css">
+
+<div class="container mt-5">
+    <h2>Asignar Rutinas</h2>
+    <form id="rutinaForm">
+        <!-- Buscar Cliente -->
+        <div class="form-group">
+            <label for="clientSearch">Buscar Cliente:</label>
+            <input type="text" id="clientSearch" class="form-control cuadritos" placeholder="Buscar cliente por nombre">
+            <input type="hidden" id="clientEmail" class="form-control cuadritos">
+            <ul id="suggestions" class="list-group" style="display:none;"></ul>
+        </div>
+
+        <!-- Correo del Entrenador -->
+        <div class="form-group">
+            <label for="entrenadorCorreo">Correo del Entrenador:</label>
+            <input type="email" id="entrenadorCorreo" class="form cuadritos" readonly>
+        </div>
+
+        <!-- Calculo de IMC -->
+        <h2>IMC</h2>
+        <div class="form-group">
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" class="form-control cuadritos">
+        </div>
+
+        <div class="form-group">
+            <label for="pesoIMC">Peso (kg):</label>
+            <input type="number" id="pesoIMC" class="form-control cuadritos">
+        </div>
+
+        <div class="form-group">
+            <label for="resultadoIMC">Resultado IMC:</label>
+            <input type="text" id="resultadoIMC" class="form cuadritos" readonly>
+        </div>
+
+        <div class="form-group">
+            <label id="imcComentario">Estado según IMC:</label>
+        </div>
+
+        <button type="button" id="calcularIMC" class="botones">Calcular IMC</button>
+
+        <hr>
+
+        <!-- Selección de Rutinas -->
+        <div class="form-group">
+            <label for="exerciseSelect">Seleccionar Ejercicio:</label>
+            <select id="exerciseSelect" class="form cuadritos">
+                <option value="">Seleccione un ejercicio</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="sets">Sets:</label>
+            <input type="number" id="sets" class="form-control cuadritos">
+        </div>
+
+        <div class="form-group">
+            <label for="repeticiones">Repeticiones:</label>
+            <input type="number" id="repeticiones" class="form-control cuadritos">
+        </div>
+
+        <div class="form-group">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" class="form-control cuadritos">
+        </div>
+
+        <div class="form-group">
+            <label for="daySelect">Días:</label>
+            <select id="daySelect" class="selects cuadritos" multiple>
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
+        </div>
+
+        <button type="button" id="addExercise" class="botones">Agregar Ejercicio</button>
+
+        <div class="mt-4">
+            <h5>Ejercicios Seleccionados</h5>
+            <div id="exerciseList" class="letras"></div>
+        </div>
+
+        <!-- Guardar Rutina -->
+        <button type="submit" class="botones">Guardar Rutina</button>
+
+        <!-- Descargar PDF -->
+        <button type="button" id="downloadPdf" class="botones">Descargar PDF</button>
+
+       <button type="button" id="sendPdfByEmail" class="botones">Enviar PDF por correo</button>
+
+        <!-- Mostrar la rutina creada y el resultado del IMC -->
+        <div id="routineDisplay" class="letras"></div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+<script src="~/js/Rutina.js"></script>

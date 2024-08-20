@@ -1,0 +1,90 @@
+﻿.form-group input[readonly] {
+    background-color: #212529;
+    color: white;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    background-color: #212529;
+    color: white;
+    border-radius: 4px;
+}
+
+input {
+    background-color: #212529;
+    color: white;
+}
+
+.form-group input, .form.form-group input[readonly] {
+    background-color: #212529;
+    color: white;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    background-color: #212529;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+-group select {
+    width: 100%;
+    padding: 8px;
+    background-color: #212529;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.botones {
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: black;
+    color: #f36100;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.modal-header, .modal-body {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom-right-radius: calc(-1px + 0.3rem);
+    border-bottom-left-radius: calc(-1px + 0.3rem);
+    padding: 0.75rem;
+    background-color: black;
+}
+
+.x{
+    color: white;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #212529;
+    opacity: 1;
+    color: white;
+}
+
+.letras{
+    color: white;
+    font-size: 25px;
+}

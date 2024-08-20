@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progreso del Usuario</title>
+
+    <!-- Estilos y Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/progreso.css" type="text/css">
+</head>
+
+<body>
+    <!-- Sección del encabezado -->
+    <section class="breadcrumb-section set-bg" data-setbg="/img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Su progreso</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario para crear/actualizar/eliminar progreso -->
+    <div class="container mt-5">
+        <form id="form-progreso">
+            <input type="hidden" id="progresoId">
+            <div class="mb-3">
+                <label for="fechaProgreso" class="form-label">Fecha de Progreso</label>
+                <input type="date" class="form" id="fechaProgreso" required>
+            </div>
+            <div class="mb-3">
+                <label for="peso" class="form-label">Peso (kg)</label>
+                <input type="number" step="0.01" class="form" id="peso" required>
+            </div>
+            <div class="mb-3">
+                <label for="masaMuscular" class="form-label">Masa Muscular (%)</label>
+                <input type="number" step="0.01" class="form" id="masaMuscular" required>
+            </div>
+            <div class="mb-3">
+                <label for="porcentajeGrasa" class="form-label">Porcentaje de Grasa (%)</label>
+                <input type="number" step="0.01" class="form" id="porcentajeGrasa" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Progreso</button>
+            <button type="button" id="btnEliminar" class="btn btn-danger">Eliminar Progreso</button>
+        </form>
+    </div>
+
+    <!-- Contenedor del gráfico -->
+    <div class="container mt-5 rect">
+        <div id="contenedor" style="width:100%; height:400px;"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="~/js/progreso.js"></script>
+</body>
+
+</html>

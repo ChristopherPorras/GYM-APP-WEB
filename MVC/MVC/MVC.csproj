@@ -1,0 +1,144 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>9284eb4a-91f6-4828-8bb4-72ef6de1deb7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Home\css\**" />
+    <Content Remove="Views\Home\css\**" />
+    <EmbeddedResource Remove="Views\Home\css\**" />
+    <None Remove="Views\Home\css\**" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Remove="wwwroot\img\hero-1.jpg" />
+		<Content Remove="wwwroot\img\team\fondo.jpg" />
+		<Content Remove="wwwroot\js\bootstrap.min.js" />
+		<Content Remove="wwwroot\js\jquery-3.3.1.min.js" />
+		<Content Remove="wwwroot\js\jquery.barfiller.js" />
+		<Content Remove="wwwroot\js\jquery.magnific-popup.min.js" />
+		<Content Remove="wwwroot\js\jquery.slicknav.js" />
+		<Content Remove="wwwroot\js\main.js" />
+		<Content Remove="wwwroot\js\masonry.pkgd.min.js" />
+		<Content Remove="wwwroot\js\owl.carousel.min.js" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\barfiller.css" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\flaticon.css" />
+    <None Include="wwwroot\css\font-awesome.min.css" />
+    <None Include="wwwroot\css\magnific-popup.css" />
+    <None Include="wwwroot\css\owl.carousel.min.css" />
+    <None Include="wwwroot\css\slicknav.min.css" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\fonts\Flaticon.eot" />
+    <None Include="wwwroot\fonts\Flaticon.svg" />
+    <None Include="wwwroot\fonts\Flaticon.ttf" />
+    <None Include="wwwroot\fonts\Flaticon.woff" />
+    <None Include="wwwroot\fonts\Flaticon.woff2" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\img\about-us.jpg" />
+    <None Include="wwwroot\img\banner-bg.jpg" />
+    <None Include="wwwroot\img\blog\blog-1.jpg" />
+    <None Include="wwwroot\img\blog\blog-2.jpg" />
+    <None Include="wwwroot\img\blog\blog-3.jpg" />
+    <None Include="wwwroot\img\blog\blog-4.jpg" />
+    <None Include="wwwroot\img\blog\blog-5.jpg" />
+    <None Include="wwwroot\img\blog\details\blog-profile.jpg" />
+    <None Include="wwwroot\img\blog\details\comment-1.jpg" />
+    <None Include="wwwroot\img\blog\details\comment-2.jpg" />
+    <None Include="wwwroot\img\blog\details\comment-3.jpg" />
+    <None Include="wwwroot\img\blog\details\details-1.jpg" />
+    <None Include="wwwroot\img\blog\details\details-2.jpg" />
+    <None Include="wwwroot\img\blog\details\details-hero.jpg" />
+    <None Include="wwwroot\img\blog\details\quote-left.png" />
+    <None Include="wwwroot\img\breadcrumb-bg.jpg" />
+    <None Include="wwwroot\img\classes\class-1.jpg" />
+    <None Include="wwwroot\img\classes\class-2.jpg" />
+    <None Include="wwwroot\img\classes\class-3.jpg" />
+    <None Include="wwwroot\img\classes\class-4.jpg" />
+    <None Include="wwwroot\img\classes\class-5.jpg" />
+    <None Include="wwwroot\img\classes\class-details\class-detailsl.jpg" />
+    <None Include="wwwroot\img\classes\class-details\trainer-profile.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-1.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-2.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-3.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-4.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-5.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-6.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-7.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-8.jpg" />
+    <None Include="wwwroot\img\gallery\gallery-9.jpg" />
+    <None Include="wwwroot\img\hero-1.jpg" />
+    <None Include="wwwroot\img\hero\hero-1.jpg" />
+    <None Include="wwwroot\img\hero\hero-2.jpg" />
+    <None Include="wwwroot\img\letest-blog\latest-1.jpg" />
+    <None Include="wwwroot\img\letest-blog\latest-2.jpg" />
+    <None Include="wwwroot\img\letest-blog\latest-3.jpg" />
+    <None Include="wwwroot\img\letest-blog\latest-4.jpg" />
+    <None Include="wwwroot\img\letest-blog\latest-5.jpg" />
+    <None Include="wwwroot\img\logo.png" />
+    <None Include="wwwroot\img\services\services-1.jpg" />
+    <None Include="wwwroot\img\services\services-2.jpg" />
+    <None Include="wwwroot\img\services\services-3.jpg" />
+    <None Include="wwwroot\img\services\services-4.jpg" />
+    <None Include="wwwroot\img\sidebar-banner.jpg" />
+    <None Include="wwwroot\img\team\team-1.jpg" />
+    <None Include="wwwroot\img\team\team-3.jpg" />
+    <None Include="wwwroot\img\team\team-4.jpg" />
+    <None Include="wwwroot\img\team\team-5.jpg" />
+    <None Include="wwwroot\img\team\team-6.jpg" />
+    <None Include="wwwroot\img\testimonial\testimonial-1.jpg" />
+    <None Include="wwwroot\img\testimonial\testimonial-2.jpg" />
+    <None Include="wwwroot\js\bootstrap.min.js" />
+    <None Include="wwwroot\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\js\jquery.barfiller.js" />
+    <None Include="wwwroot\js\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\js\jquery.slicknav.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\masonry.pkgd.min.js" />
+    <None Include="wwwroot\js\owl.carousel.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
+    <PackageReference Include="Node.js" Version="5.3.0" />
+    <PackageReference Include="jQuery" Version="3.7.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+    <PackageReference Include="SendGrid" Version="9.29.3" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API\API.csproj" />
+    <ProjectReference Include="..\BL\BL.csproj" />
+    <ProjectReference Include="..\DTO\DTO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <Content Update="Views\Home\Contactenos.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\js\CalculadoraIMC.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

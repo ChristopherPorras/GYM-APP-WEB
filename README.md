@@ -113,15 +113,23 @@ Below are some images showcasing the application's functionality and user interf
 ![Login Screen](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20213910.png)
 
 ### 2. User Management
-![User Management](path/to/image/users.png)
+![User Management](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20213955.png)
 
 ### 3. Routine Assignment
-![Routine Assignment](path/to/image/routines.png)
+![Routine Assignment](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20214248.png)
 
 ### 4. User Progress Dashboard
-![User Progress Dashboard](path/to/image/progress.png)
+![User Progress Dashboard](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20214542.png)
 
-_(Replace 'path/to/image/' with the correct paths to the project images)._
+### 5. Schedule appointments Dashboard
+![User Progress Dashboard](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20214032.png)
+
+### 6. Pay Dashboard
+![User Progress Dashboard](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20214613.png)
+![User Progress Dashboard](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20213741.png)
+
+![User Progress Dashboard](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20214203.png)
+
 
 ---
 

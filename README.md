@@ -110,7 +110,7 @@ The project follows an **MVC (Model-View-Controller)** architecture, with a clea
 Below are some images showcasing the application's functionality and user interface:
 
 ### 1. Login Screen
-![Login Screen]([path/to/image/login.png](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20213910.png))
+![Login Screen](https://github.com/ChristopherPorras/GYM-APP-WEB/blob/main/MVC/MVC/wwwroot/img/Screenshot%202024-08-19%20213910.png)
 
 ### 2. User Management
 ![User Management](path/to/image/users.png)

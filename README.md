@@ -1,32 +1,32 @@
-# Proyecto de Gestión de Gimnasio
+# Gym Management Project
 
-Este proyecto es una aplicación web completa para la gestión de un gimnasio, diseñada para administradores, entrenadores y usuarios finales. La aplicación permite gestionar usuarios, roles, ejercicios, rutinas, pagos, clases grupales y el progreso físico de los usuarios.
+This project is a comprehensive web application for gym management, designed for administrators, trainers, and end users. The application allows managing users, roles, exercises, routines, payments, group classes, and users' physical progress.
 
-## Funcionalidades Principales
+## Key Features
 
-1. **Gestión de Usuarios:**
-   - Crear, leer, actualizar y eliminar usuarios.
-   - Asignación de roles a los usuarios.
-   - Autenticación y manejo de sesiones.
+1. **User Management:**
+   - Create, read, update, and delete users.
+   - Assign roles to users.
+   - Authentication and session management.
 
-2. **Rutinas:**
-   - Asignación de rutinas personalizadas a los clientes por parte de los entrenadores.
-   - Visualización de rutinas anteriores y progreso de los clientes.
+2. **Routines:**
+   - Assign personalized routines to clients by trainers.
+   - View previous routines and track client progress.
 
-3. **Clases Grupales:**
-   - Administración y agendamiento de clases grupales.
+3. **Group Classes:**
+   - Manage and schedule group classes.
 
-4. **Pagos:**
-   - Control de pagos de membresías y clases.
-   - Generación de reportes de pagos.
+4. **Payments:**
+   - Manage membership and class payments.
+   - Generate payment reports.
 
-5. **Progreso del Usuario:**
-   - Seguimiento del progreso físico del cliente a lo largo del tiempo.
+5. **User Progress:**
+   - Track clients' physical progress over time.
 
-6. **Notificaciones por Correo Electrónico:**
-   - Envío de notificaciones automáticas a los usuarios sobre citas y progreso.
+6. **Email Notifications:**
+   - Send automatic notifications to users about appointments and progress.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 - **Backend:**
   - C# .NET Core
@@ -36,56 +36,56 @@ Este proyecto es una aplicación web completa para la gestión de un gimnasio, d
 
 - **Frontend:**
   - HTML, CSS, JavaScript, Bootstrap
-  - cshtml para vistas dinámicas
+  - cshtml for dynamic views
 
 - **APIs:**
-  - RESTful APIs para la gestión de usuarios, rutinas, pagos, progreso, y clases grupales.
+  - RESTful APIs for managing users, routines, payments, progress, and group classes.
 
-- **Autenticación y Seguridad:**
+- **Authentication and Security:**
   - ASP.NET Core Identity
-  - JWT (Tokens de Autenticación)
+  - JWT (Authentication Tokens)
 
-- **Otros:**
-  - Swagger para la documentación de la API.
-  - CORS para manejar las políticas de acceso cruzado.
-  - Configuración de correo electrónico con servicios SMTP.
+- **Other:**
+  - Swagger for API documentation.
+  - CORS for handling cross-origin policies.
+  - Email configuration with SMTP services.
 
-## Arquitectura
+## Architecture
 
-El proyecto sigue una arquitectura **MVC (Modelo-Vista-Controlador)**, con una clara separación entre la lógica de negocio, el acceso a datos, y la interfaz de usuario. Además, se implementaron APIs RESTful que permiten la interacción entre el cliente y el servidor, proporcionando una interfaz estándar para las operaciones de CRUD.
+The project follows an **MVC (Model-View-Controller)** architecture, with a clear separation between business logic, data access, and user interface. Additionally, RESTful APIs are implemented to enable interaction between the client and server, providing a standard interface for CRUD operations.
 
-## Estructura del Proyecto
+## Project Structure
 
-- **API:** Contiene los controladores que gestionan las operaciones principales.
-- **BL (Business Logic):** Implementa la lógica de negocio del sistema.
-- **DataAccess:** Maneja el acceso a la base de datos utilizando Entity Framework.
-- **DTO (Data Transfer Objects):** Define los objetos utilizados para transferir datos entre las capas.
+- **API:** Contains the controllers that manage the main operations.
+- **BL (Business Logic):** Implements the business logic of the system.
+- **DataAccess:** Handles database access using Entity Framework.
+- **DTO (Data Transfer Objects):** Defines the objects used to transfer data between layers.
 
-## Imágenes del Proyecto
+## Project Images
 
-A continuación, algunas imágenes del funcionamiento de la aplicación y la interfaz de usuario:
+Below are some images showcasing the application's functionality and user interface:
 
-### 1. Pantalla de Inicio de Sesión
-![Pantalla de Inicio de Sesión](ruta/a/la/imagen/login.png)
+### 1. Login Screen
+![Login Screen](path/to/image/login.png)
 
-### 2. Gestión de Usuarios
-![Gestión de Usuarios](ruta/a/la/imagen/usuarios.png)
+### 2. User Management
+![User Management](path/to/image/users.png)
 
-### 3. Asignación de Rutinas
-![Asignación de Rutinas](ruta/a/la/imagen/rutinas.png)
+### 3. Routine Assignment
+![Routine Assignment](path/to/image/routines.png)
 
-### 4. Panel de Progreso del Usuario
-![Progreso del Usuario](ruta/a/la/imagen/progreso.png)
+### 4. User Progress Dashboard
+![User Progress Dashboard](path/to/image/progress.png)
 
-_(Reemplaza 'ruta/a/la/imagen/' con las rutas correctas a las imágenes del proyecto)._
+_(Replace 'path/to/image/' with the correct paths to the project images)._
 
 ---
 
-Este README proporciona una visión general del proyecto de gestión de gimnasio. Para más detalles, consulta la documentación y el código fuente.
+This README provides an overview of the gym management project. For more details, refer to the documentation and source code.
 """
 
-# Writing the updated content to the README.md file
+# Writing the English version of the README.md file
 with open(readme_path, 'w') as file:
-    file.write(updated_readme_content)
+    file.write(readme_content_english)
 
-updated_readme_content
+readme_content_english
